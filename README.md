@@ -9,3 +9,27 @@ This app is built using Appsmith. Turn any datasource into an internal app in mi
 ##### You can visit the application using the below link
 
 ###### [![](https://assets.appsmith.com/git-sync/Buttons.svg) ](https://app.appsmith.com/applications/62858867309fd93a9bf16b14/pages/628b05217901344ba8d1abb1) [![](https://assets.appsmith.com/git-sync/Buttons2.svg)](https://app.appsmith.com/applications/62858867309fd93a9bf16b14/pages/628b05217901344ba8d1abb1/edit)
+
+# Business Problem
+Without surfing the dial, it’s difficult for potential listeners to find shows and stations they want to listen to.
+
+We wanted a way for listeners to be able to:
+Find Radio Shows that match their tastes and schedules
+Find Radio Stations that broadcast within the user’s vicinity
+# Solution
+Our team develop an application that make it easier for users to search for different nearby stations that suit their interests.
+
+Users will be able to:
+
+Select/sort different genres
+
+Select/sort by time of day
+
+Select/sort by day of the week
+
+Search for radio station by callsign
+
+View radio show information (host name, genres, timeline)
+
+View results within their current radius
+
