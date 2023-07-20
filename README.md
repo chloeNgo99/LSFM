@@ -29,7 +29,10 @@ Select/sort by day of the week
 
 Search for radio station by callsign
 
-View radio show information (host name, genres, timeline)
+View radio show information (hostname, genres, timeline)
 
 View results within their current radius
+
+# Schema
+![schema](https://github.com/chloeNgo99/LSFM/blob/main/LSFM%20Schema.png)
 
