@@ -1,0 +1,8 @@
+Update radio_show
+set
+name = '{{name_input.text}}',
+description = '{{description_Input.text}}',
+genreid = (select Genre.id from Genre where Genre.name ILIKE '{{genre_input.text}}'),
+stationid = (select Radio_station.id from Radio_station where Radio_station.name ILIKE 
+		 '{{station_input.text}}')
+;

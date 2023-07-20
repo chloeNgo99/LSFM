@@ -1,0 +1,16 @@
+SELECT Radio_station.frequency, Radio_station.callsign, Radio_station.name,  	 
+	Radio_show.name AS station, Genre.name as genre, Radio_show.description, 
+	Host.firstname, Host.lastname, Day.name as day, Timeslot.start_time, Timeslot.duration
+FROM Radio_show
+JOIN Genre ON (Radio_show.genreid = Genre.id)
+JOIN Show_hosts ON (Radio_show.id = Show_hosts.showid)
+JOIN Host ON (Show_hosts.hostid = Host.id)
+JOIN Radio_station ON (Radio_show.stationID = Radio_station.id)
+JOIN Timeslot ON (Radio_show.id = Timeslot.showid)
+JOIN Days ON (Timeslot.id = Days.timeslotid)
+JOIN Day ON (Days.dayid = Day.id)
+WHERE Genre.name ILIKE {{this.params.genre}} AND
+			Host.firstname ILIKE {{this.params.fname}} AND
+			Host.lastname ILIKE {{this.params.lname}} AND
+			Radio_station.callsign ILIKE {{this.params.sign}} AND
+			Day.name ILIKE {{this.params.day}};

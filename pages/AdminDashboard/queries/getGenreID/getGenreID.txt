@@ -1,0 +1,2 @@
+select genreid from radio_show
+where name = '{{name_input.text}}' and description = '{{description_Input.text}}';

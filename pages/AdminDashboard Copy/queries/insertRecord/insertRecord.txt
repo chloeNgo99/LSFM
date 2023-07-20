@@ -1,0 +1,10 @@
+INSERT INTO radio_show
+  (name, description, genreID, stationID)
+VALUES
+  (
+    {{name_input.text }},
+    {{description_Input.text}},
+		(select Genre.id from Genre where Genre.name ILIKE {{genre_input.text}}),
+		(select Radio_station.id from Radio_station where Radio_station.name ILIKE 
+		 {{station_input.text}})
+  );

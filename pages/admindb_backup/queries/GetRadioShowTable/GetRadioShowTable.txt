@@ -1,0 +1,4 @@
+select r.name, r.description, g.name as genere, s.name as station 
+from radio_show r
+join genre g on r.genreid = g.id
+join radio_station s on r.stationid = s.id;

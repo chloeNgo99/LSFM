@@ -1,0 +1,13 @@
+delete from radio_show where id = (
+
+select id from radio_show where name = {{name_input.text}} 
+			and description = {{description_Input.text}}
+			and genreid = (select Genre.id from Genre where Genre.name ILIKE {{genre_input.text}} LIMIT 1) 
+			and stationid = (select Radio_station.id from Radio_station where Radio_station.name ILIKE 
+		 {{station_input.text}} LIMIT 1) limit 1
+
+);
+
+
+
+

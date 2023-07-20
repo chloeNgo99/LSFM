@@ -1,0 +1,2 @@
+INSERT INTO public."day" ("id", "name")
+  VALUES (1, '');

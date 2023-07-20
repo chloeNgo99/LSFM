@@ -1,0 +1,12 @@
+UPDATE public."users" SET
+    "gender" = '',
+    "latitude" = '',
+    "longitude" = '',
+    "dob" = TIMESTAMP WITH TIME ZONE '2019-07-01 06:30:00 CET',
+    "phone" = '',
+    "email" = '',
+    "image" = '',
+    "country" = '',
+    "name" = '',
+    "phone_dummy" = ''
+  WHERE 1 = 0; -- Specify a valid condition here. Removing the condition may update every row in the table!

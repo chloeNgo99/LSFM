@@ -1,0 +1,5 @@
+UPDATE public."location" SET
+    "city" = '',
+    "latitude" = '',
+    "longitude" = ''
+  WHERE 1 = 0; -- Specify a valid condition here. Removing the condition may update every row in the table!

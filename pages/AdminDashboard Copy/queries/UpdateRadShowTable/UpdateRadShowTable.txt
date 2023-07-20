@@ -1,0 +1,9 @@
+Update radio_show
+set
+name = '{{name_input.text}}',
+description = '{{description_Input.text}}',
+genreid = '{{genre_input.text}}',
+stationid = '{{station_input.text}}'
+where id = (select id from radio_show where name = {{name_input.text}} 
+			and description = {{description_Input.text}}
+			and genreid = (select Genre.id from Genre where Genre.name ILIKE {{genre_input.text}} LIMIT 1));

@@ -1,0 +1,11 @@
+SELECT Radio_station.frequency, Radio_station.callsign, Radio_station.name AS station,  	 Radio_show.name , Genre.name as genre, Radio_show.description, 
+	Host.firstname, Host.lastname, Day.name as day, Timeslot.start_time, extract(hour FROM Timeslot.duration) AS hour_duration
+FROM Radio_show
+LEFT JOIN Genre ON (Radio_show.genreid = Genre.id)
+LEFT JOIN Show_hosts ON (Radio_show.id = Show_hosts.showid)
+LEFT JOIN Host ON (Show_hosts.hostid = Host.id)
+LEFT JOIN Radio_station ON (Radio_show.stationID = Radio_station.id)
+LEFT JOIN Timeslot ON (Radio_show.id = Timeslot.showid)
+LEFT JOIN Days ON (Timeslot.id = Days.timeslotid)
+LEFT JOIN Day ON (Days.dayid = Day.id)
+LEFT JOIN Location ON (Radio_station.locationid = Location.id);

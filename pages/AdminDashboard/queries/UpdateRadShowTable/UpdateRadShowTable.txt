@@ -1,0 +1,7 @@
+Update radio_show
+set
+name = '{{name_input.text}}',
+description = '{{description_Input.text}}',
+genreid = '{{genre_input.text}}',
+stationid = '{{station_input.text}}',
+where id = '{{RadShowTable.selectedRow.id}}';

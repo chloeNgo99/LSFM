@@ -1,0 +1,12 @@
+UPDATE Radio_show
+SET name = {{name_inputCopy.text}}, 
+    description = {{description_InputCopy.text}}, 
+    stationid = (select Radio_station.id from Radio_station where Radio_station.name ILIKE {{station_inputCopy.text}} LIMIT 1), 
+    genreid = (select Genre.id from Genre where Genre.name ILIKE {{genre_inputCopy.text}} LIMIT 1)
+WHERE id = (
+  select Radio_show.id from Radio_show 
+	where Radio_show.name ILIKE {{name_input.text}} AND 
+				Radio_show.description ILIKE {{description_Input.text}} AND 
+				Radio_show.genreid = (select Genre.id from Genre where Genre.name ILIKE {{genre_input.text}} LIMIT 1) AND
+			  Radio_show.stationid = (select Radio_station.id from Radio_station where Radio_station.name ILIKE {{station_input.text}} LIMIT 1)
+        LIMIT 1);
